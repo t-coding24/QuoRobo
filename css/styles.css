@@ -1,0 +1,10 @@
+button {
+  display: block;
+  margin: 2px;
+  height: 45px;
+  width: 65px;
+}
+button.xlarge{
+font-size: 30px;
+height:55px;
+}
