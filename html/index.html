@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Monitoring</title>
+      <link href="../css/bootstrap.min.css" rel="stylesheet">
+      <link href="../css/styles.css" rel="stylesheet">
+   </head>
+   <body>
+      <div class="container">
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <h1 class="page-title">Monitoring</h1>
+            </div>
+            <div class="panel-body col-xs-12">
+               <div class="col-xs-5"> 
+                  <div class="row">
+                     <div class="col-xs-offset-3 col-xs-2">
+                        <button class="btn btn-info" id="upBtn">
+                           <span class="glyphicon glyphicon-menu-up"></span>
+                        </button>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-xs-offset-1 col-xs-2">
+                        <button class="btn btn-info" id="leftBtn">
+                           <span class="glyphicon glyphicon-menu-left"></span>
+                        </button>
+                     </div>
+                     <div class="col-xs-2">
+                        <button class="btn btn-primary" id="homeBtn">
+                           <span class="glyphicon glyphicon-home"></span>
+                        </button>
+                     </div>
+                     <div class="col-xs-2">
+                        <button class="btn btn-info" id="rightBtn">
+                           <span class="glyphicon glyphicon-menu-right"></span>
+                        </button>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-xs-offset-3 col-xs-2">
+                        <button class="btn btn-info" id="downBtn">
+                           <span class="glyphicon glyphicon-menu-down"></span>
+                        </button>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-xs-offset-3 col-xs-4">
+                        <button class="btn btn-warning" id="shotBtn">
+                           <span class="glyphicon glyphicon-camera"></span>
+                        </button>
+                     </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                     <div class="col-xs-offset-1 col-xs-2">
+                        <button class="btn btn-info xlarge" id="smileBtn">😊</button>
+                     </div>
+                     <div class="col-xs-2">
+                        <button class="btn btn-info xlarge" id="blinkBtn">😉</button>
+                     </div>
+                     <div class="col-xs-2">
+                        <button class="btn btn-info xlarge" id="happyBtn">😑</button>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-xs-offset-1 col-xs-2">
+                        <button class="btn btn-info xlarge" id="emo1Btn">😰</button>
+                     </div>
+                     <div class="col-xs-2">
+                        <button class="btn btn-info xlarge" id="emo2Btn">😧</button>
+                     </div>
+                     <div class="col-xs-2">
+                        <button class="btn btn-info xlarge" id="emo3Btn">😲</button>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xs-7">
+                  <div class="row">
+                     <div class="col-xs-offset-1 col-xs-10">
+                        <img id="feed" style="width: 480px; height: 360px;" src="http://192.168.1.37:8080/?action=stream" class="img-responsive">
+                     </div>
+                  </div>
+               </div>   
+            </div>
+            <div class="panel-footer text-center">
+               <p>Junction Asia2016 Tokyo</p>
+            </div>
+         </div>
+      </div>
+      <script src="../js/jquery-1.11.3.min.js"></script>
+      <script src="../js/bootstrap.min.js"></script>
+      <script src="../js/nipplejs.js"></script>
+      <script src="../js/jquery.facedetection.min.js"></script>
+      <script src="../js/require.js"></script>
+      <script>
+         require(["/webiopi.js", "../js/monitoring.js"], function(){
+           webiopi().ready(initialize_webiopi);
+         });
+      </script>
+   </body>
+</html>
